@@ -31,12 +31,41 @@ class _CardState extends State<Card> {
           centerTitle: true,
           backgroundColor: Colors.blue[900],
         ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: <Widget>[
+              DrawerHeader(
+                child: Text('Drawer Header'),
+                decoration: BoxDecoration(
+                  color: Colors.blue[900],
+                ),
+              ),
+              ListTile(
+                title: Text('Item 1'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+              ListTile(
+                title: Text('Item 2'),
+                onTap: () {
+                  // Update the state of the app.
+                  // ...
+                },
+              ),
+            ],
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
               level += 1;
             });
           },
+          tooltip: "Add",
+          hoverColor: Colors.blue[300],
           child: Icon(Icons.add),
           backgroundColor: Colors.blue[900],
         ),
