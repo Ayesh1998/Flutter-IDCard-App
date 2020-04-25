@@ -58,6 +58,47 @@ class _CardState extends State<Card> {
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+          backgroundColor: Colors.blue[900],
+          currentIndex: 0, // this will be set when a new tab is tapped
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+                color: Colors.white,
+              ),
+              title: new Text(
+                'Home',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(
+                Icons.mail,
+                color: Colors.white,
+              ),
+              title: new Text(
+                'Messages',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                ),
+                title: Text(
+                  'Profile',
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ))
+          ],
+        ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             setState(() {
